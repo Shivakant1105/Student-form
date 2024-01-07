@@ -1,0 +1,105 @@
+<!-- student-list.component.html -->
+<div>
+    <h2>All Submitted Data</h2>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let student of students" (click)="showStudentDetails(student)" style="cursor: pointer;">
+                <td>{{ student.firstName }}</td>
+                <td>{{ student.lastName }}</td>
+                <td>{{ student.email }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<!-- List view Individual Student   -->
+
+<div *ngIf=" selectedStudent">
+    <h2>Individual Student Data</h2>
+    <p><strong>Name:</strong> {{ selectedStudent.firstName }} {{ selectedStudent.lastName }}</p>
+    <p><strong>Gender:</strong> {{ selectedStudent.gender }}</p>
+    <p><strong>Previous School:</strong> {{ selectedStudent.previousSchool }}</p>
+    <p><strong>Previous Class:</strong> {{ selectedStudent.previousClass }}</p>
+    <p><strong>Previous Class Name:</strong> {{ selectedStudent.previousClassName }}</p>
+    <p><strong>Mobile Number:</strong> {{ selectedStudent.mobileNumber }}</p>
+    <p><strong>Parent Mobile Number:</strong> {{ selectedStudent.parentMobileNumber }}</p>
+    <p><strong>Address:</strong> {{ selectedStudent.address }}</p>
+    <p><strong>City:</strong> {{ selectedStudent.city }}</p>
+    <p><strong>State:</strong> {{ selectedStudent.state }}</p>
+    <p><strong>Pincode:</strong> {{ selectedStudent.pincode }}</p>
+    <p><strong>Email:</strong> {{ selectedStudent.email }}</p>
+    <p><strong>Previous Grades:</strong> {{ selectedStudent.previousGrades }}</p>
+    <p><strong>Favorite Subject:</strong> {{ selectedStudent.favoriteSubject }}</p>
+</div>
+
+<!-- Table view Individual Student Data -->
+<!-- 
+<div *ngIf="selectedStudent">
+    <h2>Individual Student Data</h2>
+    <table class="table table-bordered">
+        <tbody>
+            <tr>
+                <td><strong>Name:</strong></td>
+                <td>{{ selectedStudent.firstName }} {{ selectedStudent.lastName }}</td>
+            </tr>
+            <tr>
+                <td><strong>Gender:</strong></td>
+                <td>{{ selectedStudent.gender }}</td>
+            </tr>
+            <tr>
+                <td><strong>Previous School:</strong></td>
+                <td>{{ selectedStudent.previousSchool }}</td>
+            </tr>
+            <tr>
+                <td><strong>Previous Class:</strong></td>
+                <td>{{ selectedStudent.previousClass }}</td>
+            </tr>
+            <tr>
+                <td><strong>Previous Class Name:</strong></td>
+                <td>{{ selectedStudent.previousClassName }}</td>
+            </tr>
+            <tr>
+                <td><strong>Mobile Number:</strong></td>
+                <td>{{ selectedStudent.mobileNumber }}</td>
+            </tr>
+            <tr>
+                <td><strong>Parent Mobile Number:</strong></td>
+                <td>{{ selectedStudent.parentMobileNumber }}</td>
+            </tr>
+            <tr>
+                <td><strong>Address:</strong></td>
+                <td>{{ selectedStudent.address }}</td>
+            </tr>
+            <tr>
+                <td><strong>City:</strong></td>
+                <td>{{ selectedStudent.city }}</td>
+            </tr>
+            <tr>
+                <td><strong>State:</strong></td>
+                <td>{{ selectedStudent.state }}</td>
+            </tr>
+            <tr>
+                <td><strong>Pincode:</strong></td>
+                <td>{{ selectedStudent.pincode }}</td>
+            </tr>
+            <tr>
+                <td><strong>Email:</strong></td>
+                <td>{{ selectedStudent.email }}</td>
+            </tr>
+            <tr>
+                <td><strong>Previous Grades:</strong></td>
+                <td>{{ selectedStudent.previousGrades }}</td>
+            </tr>
+            <tr>
+                <td><strong>Favorite Subject:</strong></td>
+                <td>{{ selectedStudent.favoriteSubject }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div> -->

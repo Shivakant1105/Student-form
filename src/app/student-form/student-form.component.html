@@ -1,0 +1,149 @@
+<!-- student-form.component.html -->
+<div class="container mt-4">
+    <div class="card">
+        <form [formGroup]="studentForm" (ngSubmit)="onSubmit()" class="card-body">
+
+            <!-- Student Info Section -->
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="firstName">First Name:</label>
+                       
+                        <input type="text" id="firstName" formControlName="firstName" (keypress)="alphaOnly($event)" class="form-control" required>
+  
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="lastName">Last Name:</label>
+                        <input type="text" id="lastName" formControlName="lastName" class="form-control" required>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="gender">Gender:</label>
+                        <input type="text" id="gender" formControlName="gender" class="form-control" required>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="previousSchool">Previous School:</label>
+                        <input type="text" id="previousSchool" formControlName="previousSchool" class="form-control"
+                            required>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="previousClass">Previous Class:</label>
+                        <input type="text" id="previousClass" formControlName="previousClass" class="form-control"
+                            required>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="previousClassName">Previous Class Name:</label>
+                        <input type="text" id="previousClassName" formControlName="previousClassName"
+                            class="form-control" required>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Student Contact Section -->
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="mobileNumber">Mobile Number:</label>
+                        <input type="number" id="mobileNumber" formControlName="mobileNumber" class="form-control"
+                            required>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="parentMobileNumber">Parent Mobile Number:</label>
+                        <input type="number" id="parentMobileNumber" formControlName="parentMobileNumber"
+                            class="form-control" required>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="address">Address:</label>
+                        <input type="text" id="address" formControlName="address" class="form-control" required>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="city">City:</label>
+                        <input type="text" id="city" formControlName="city" class="form-control" required>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="state">State:</label>
+                        <input type="text" id="state" formControlName="state" class="form-control" required>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="pincode">Pincode:</label>
+                        <input type="number" id="pincode" formControlName="pincode" class="form-control" required>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" formControlName="email" class="form-control" required>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Student Academic Section -->
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="previousGrades">Previous Grades:</label>
+                        <input type="text" id="previousGrades" formControlName="previousGrades" class="form-control"
+                            required>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="favoriteSubject">Favorite Subject:</label>
+                        <input type="text" id="favoriteSubject" formControlName="favoriteSubject" class="form-control"
+                            required>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <button type="submit" [disabled]="!studentForm.valid" class="btn btn-primary">Submit</button>
+                </div>
+            </div>
+
+        </form>
+    </div>
+</div>
+
+<app-student-list></app-student-list>
